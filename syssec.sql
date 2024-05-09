@@ -1,16 +1,10 @@
 create database SysSec;
-use SysSec;
+use syssec;
 
-create table seguradora (
+create table empresa (
 id int not null primary key auto_increment,
-login varchar(50) not null,
-cnpj varchar(25) not null, 
-nome varchar(50) not null
-);
-
-create table concessionaria (
-id int not null primary key auto_increment,
-login varchar(50) not null,
-cnpj varchar(25) not null, 
-nome varchar(50) not null
+senha varchar(50) not null,
+cnpj varchar(22) not null, 
+nome varchar(50) not null,
+email varchar(50) not null
 );
