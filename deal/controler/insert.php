@@ -1,5 +1,5 @@
 <?php
-require('../model/conexao.php');
+require('conexao.php');
 
 if($_SERVER["REQUEST_METHOD"]== "POST"){
     $nome = $_POST["nome"];
@@ -33,7 +33,6 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
 
     if(InserirEmpresa($conexao, $nome, $senha, $email, $cnpj)){
         echo "Dados inseridos com sucesso!";
-        header('Location: ../view/Tlogin.html');
     } else {
         echo "Erro ao inserir dados ou CNPJ já cadastrado!";
     }

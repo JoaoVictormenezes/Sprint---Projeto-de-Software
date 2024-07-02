@@ -27,9 +27,6 @@
   background-color: #007e98;
 }
 
-a {
-  text-decoration: none;
-}
 
 body {
   font-family: "Poppins", sans-serif;
@@ -491,3 +488,16 @@ margin-left: 5%;}
     margin-left: 30%;
     margin-top: 4%;
 }
+
+#leftmenu a {
+text-decoration: none;
+color: white;
+padding: 10px 10px;
+background-color: #161b22;
+border-radius: 1.5ch;
+margin-top: 2%;
+display: flex;
+width: 150px;
+margin-left: 3%;
+}
+
