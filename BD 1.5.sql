@@ -24,4 +24,14 @@ drop table perfil;
 select id,nome,imagem,bio,local from perfil;
 
 update perfil set nome = "tchais",imagem = "../uploads/gragola.jpeg"  where id = 4;
+CREATE TABLE perfis_salvos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_email VARCHAR(255) NOT NULL,
+    perfil_id INT NOT NULL,
+    CONSTRAINT fk_user_email FOREIGN KEY (user_email) REFERENCES users(email),
+    CONSTRAINT fk_perfil_id FOREIGN KEY (perfil_id) REFERENCES perfil(id)
+);
+truncate table perfis_salvos;
+select * from perfis_salvos;
+
 
