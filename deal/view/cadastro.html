@@ -21,6 +21,9 @@
             // Atualiza o valor do input com o CNPJ formatado
             input.value = cnpj;
         }
+        function limparFormulario() {
+            document.getElementById("login-form").reset();
+        }
     </script>
 </head>
 <body>
@@ -30,16 +33,15 @@
             <div class="main">
                 <div class="conteudo">
                     <h2>Cadastro</h2>
-                    <form action="insert.php" method="POST">
+                    <form id="login-form" action="../controler/Ccadastrar.php" method="POST">
                         <input id="CNPJ" type="text" name="cnpj" placeholder="inserir CNPJ"  oninput="formatarCNPJ(this)" maxlength="18" required autofocus="">
                         <input type="password" name="senha" placeholder="Criar Senha" required autofocus="">
                         <input type="text" name="nome" placeholder="Nome da Empresa" required autofocus="">
                         <input type="text" name="email" placeholder="Email Corporativo" required autofocus="">
-                         <button class="btn" type="submit">Cadastrar</button>
-
+                         <button class="btn-cadastro" type="submit">Cadastrar</button>
+                         <button class="btn-limpar" type="button" onclick="limparFormulario()">Limpar formulário</button>
                     </form>
-                    <p class="account">Já possue uma conta? <a href="Login.html">Log In</a></p>
-                     
+                    <p class="account">Já possue uma conta? <a href="../view/Tlogin.html">Log In</a></p>
                 </div>
                 <div class="imagem">
                     <img src="#" alt="">
@@ -47,11 +49,5 @@
             </div>
         </div>
     </div>
-    
 </body>
 </html>
-
-
-
-
-

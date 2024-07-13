@@ -77,8 +77,11 @@ try {
     <title>Document</title>
 </head>
 <body>
+     
+
     <section id="container">
         <section id="leftmenu"> 
+             <a href="../controler/logout.php">Sair</a>
             <a href="../view/Tpagperfil.php">Pagina de Perfis</a>
             <div id="viewsave">
                 <?php foreach ($perfisSalvos as $perfil): ?>

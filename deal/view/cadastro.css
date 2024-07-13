@@ -23,6 +23,18 @@
     max-width: 800px;
     margin: 0 auto;
 }
+.btn-limpar{
+    font-size: 14px;
+    color: #fff;
+    width: 100%;
+    background: #007e98;
+    border: none;
+    padding: 8px 9px;
+    font-weight: 600;
+    transition: 0.3s ease;
+    margin-top: 10px;
+    cursor: pointer;
+}
 
 .login-form h1{
     text-align: center;
