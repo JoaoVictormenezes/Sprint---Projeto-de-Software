@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <script>
+        function formatarCNPJ(input) {
+            // Remove todos os caracteres não numéricos
+            let cnpj = input.value.replace(/\D/g, '');
+
+            // Formata o CNPJ com barras e hífen
+            cnpj = cnpj.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})$/, '$1.$2.$3/$4-$5');
+
+            // Limita o CNPJ a no máximo 14 dígitos
+            if (cnpj.length > 14) {
+                cnpj = cnpj.substring(0, 18);
+            }
+
+            // Atualiza o valor do input com o CNPJ formatado
+            input.value = cnpj;
+        }
+        function limparFormulario() {
+            document.getElementById("login-form").reset();
+        }
+    </script>
+</head>
+<body>
+    <div class="login-form">
+        <h1>Bem Vindo!</h1>
+        <div class="container">
+            <div class="main">
+                <div class="conteudo">
+                    <h2>Cadastro</h2>
+                    <form id="login-form" action="../controler/Ccadastrar.php" method="POST">
+                        <input id="CNPJ" type="text" name="cnpj" placeholder="inserir CNPJ"  oninput="formatarCNPJ(this)" maxlength="18" required autofocus="">
+                        <input type="password" name="senha" placeholder="Criar Senha" required autofocus="">
+                        <input type="text" name="nome" placeholder="Nome da Empresa" required autofocus="">
+                        <input type="text" name="email" placeholder="Email Corporativo" required autofocus="">
+                         <button class="btn-cadastro" type="submit">Cadastrar</button>
+                         <button class="btn-limpar" type="button" onclick="limparFormulario()">Limpar formulário</button>
+                    </form>
+                    <p class="account">Já possue uma conta? <a href="../view/Tlogin.html">Log In</a></p>
+                </div>
+                <div class="imagem">
+                    <img src="#" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
