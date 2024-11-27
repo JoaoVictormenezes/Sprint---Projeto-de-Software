@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+    <div class="login-form">
+        <h1>Bem Vindo!</h1>
+        <div class="container">
+            <div class="main">
+                <div class="conteudo">
+                    <h2>Log In</h2>
+                    <form action="../controller/UsuarioController.php" method="POST"> <!-- Mudança aqui -->
+                        <input id="CNPJ" type="text" name="email" placeholder="Email" required autofocus>
+                        <input type="password" name="senha" placeholder="Senha" required>
+                        <button class="btn" type="submit" name="submit">Login</button> <!-- Mudança aqui -->
+                    </form>
+                    <p class="account">Não possui uma conta? <a href="../view/cadastro.html">Cadastre-se</a></p>
+                    <p class="account"><a href="../INDEX.html">Voltar</a></p>
+                </div>
+                <img src="" alt="">
+                <div class="imagem">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
